@@ -39,3 +39,13 @@ then
 else
       echo "The mobile format is invalid"
 fi
+
+Password=""
+validPassword="^[A-Z]{1}*[a-z]{5}*[0-9]{3}*$"
+read -p "Enter the valid password:" Password
+if [[ $Password =~ $validPassword ]]
+then
+      echo "The password is valid"
+else
+      echo "The password is not valid"
+fi

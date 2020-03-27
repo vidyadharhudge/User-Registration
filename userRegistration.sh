@@ -1,14 +1,33 @@
 #!/bin/bash -x
 echo "Welcome To User Registration Programming"
+validName="^[A-Z][a-z]{3,}$" 
 
-validName=^[A-Z][a-z]{3,}* #for first name
-validName=[A-Z][a-z]{3,}*$ #for last name
-validName="^[A-Z][a-z]{3,}[ ]*[A-Z][a-z]{3,}*$"  #merging first name and last name [ ] for space  
-userName=""
-read -p "Enter The Name:" userName
-if [[ $userName =~ $validName ]]
+firstName=""
+read -p "Enter The firstName:" firstName
+if [[ $firstName =~ $validName ]]
 then
-      echo "User Name Is Valid"
+      echo "firstName Is Valid"
 else
-      echo "User Name Is Invalid"    
+      echo "firstName Is Invalid"    
 fi
+
+lastName=""
+read -p "Enter The lastName:" lastName
+if [[ $lastName =~ $validName ]]
+then
+      echo "lastName Is Valid"
+else
+      echo "lastName Is Invalid"
+fi
+
+email=""
+validEmail="^[a-zA-Z0-9]{3,}+[@][a-zA-Z0-9]{3,}+[.][a-zA-Z]{3,}$"
+read -p "Enter The Email:" email
+if [[ $email =~ $validEmail ]]
+then
+    echo "email is valid"
+else
+     echo "email is invalid"
+fi
+
+

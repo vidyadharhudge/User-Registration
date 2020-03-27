@@ -25,9 +25,17 @@ validEmail="^[a-zA-Z0-9]{3,}+[@][a-zA-Z0-9]{3,}+[.][a-zA-Z]{3,}$"
 read -p "Enter The Email:" email
 if [[ $email =~ $validEmail ]]
 then
-    echo "email is valid"
+      echo "email is valid"
 else
-     echo "email is invalid"
+      echo "email is invalid"
 fi
 
-
+mobileFormat=""
+validMobileformat="^[0-9]{2}[ ][0-9]{10}$"   #[ ] for space 
+read -p "Enter the mobile number format:" mobileFormat
+if [[ $mobileFormat =~ $validMobileformat ]]
+then
+      echo "The mobile format is valid"
+else
+      echo "The mobile format is invalid"
+fi

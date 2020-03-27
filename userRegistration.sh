@@ -41,11 +41,12 @@ else
 fi
 
 Password=""
-validPassword="^[A-Z]{1,}*[a-z]{4,}*[0-9]{3,}*$"
+validPassword="^[A-Z]{1,}*[a-z]{4,}*[0-9]{2,}*[\!\@\#\%\$\&\*\]{1}*$"
 read -p "Enter the valid password:" Password
-if [[ ${Password} =~ $validPassword ]]
+if [[ $Password =~ $validPassword ]]
 then
       echo "The password is valid"
 else
       echo "The password is not valid"
 fi
+

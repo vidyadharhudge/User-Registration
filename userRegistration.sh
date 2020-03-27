@@ -21,6 +21,9 @@ else
 fi
 
 email=""
+emailPattern1="^[a-zA-Z0-9]{3,}+[@]{1}$"
+emailPattern2="^[a-zA-Z0-9]{3,}+[@]{1}[a-zA-Z0-9]{3,}$"
+emailPattern3="^[a-zA-Z0-9]{3,}+[@]{1}[a-zA-Z0-9]{3,}+[.][a-zA-Z]{3,}$"
 validEmail="^[a-zA-Z0-9]{3,}+[@][a-zA-Z0-9]{3,}+[.][a-zA-Z]{3,}$"
 read -p "Enter The Email:" email
 if [[ $email =~ $validEmail ]]
